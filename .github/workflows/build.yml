@@ -28,7 +28,6 @@ jobs:
         run: npm install -g @capacitor/cli
 
       - name: Create www folder
-        run: mkdir -p www && echo "<html></html>" > www/index.html
 
       - name: Add Android platform
         run: npx cap add android

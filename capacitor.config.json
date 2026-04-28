@@ -4,9 +4,12 @@
   "webDir": "www",
   "server": {
     "url": "https://ashh2905-iris-ai.hf.space",
-    "cleartext": true
+    "cleartext": true,
+    "androidScheme": "https"
   },
   "android": {
-    "allowMixedContent": true
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
   }
 }

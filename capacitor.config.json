@@ -1,0 +1,12 @@
+{
+  "appId": "com.ayush.iris",
+  "appName": "IRIS",
+  "webDir": "www",
+  "server": {
+    "url": "https://ashh2905-iris-ai.hf.space",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

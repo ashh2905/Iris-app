@@ -28,7 +28,7 @@ jobs:
         run: npm install -g @capacitor/cli
 
       - name: Add Android platform
-        run: npx cap add android
+        run: npx cap add android || echo "Android already added"
 
       - name: Copy web assets
         run: npx cap copy android
@@ -69,6 +69,9 @@ jobs:
             </application>
           </manifest>
           EOF
+
+      - name: Sync Capacitor Plugins
+        run: npx cap sync android
 
       - name: Make gradlew executable
         run: chmod +x android/gradlew

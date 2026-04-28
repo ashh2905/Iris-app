@@ -27,8 +27,6 @@ jobs:
       - name: Install Capacitor CLI
         run: npm install -g @capacitor/cli
 
-      - name: Create www folder
-
       - name: Add Android platform
         run: npx cap add android
 

@@ -5,7 +5,11 @@
   "server": {
     "url": "https://ashh2905-iris-ai.hf.space",
     "cleartext": true,
-    "androidScheme": "https"
+    "androidScheme": "https",
+    "allowNavigation": [
+      "ashh2905-iris-ai.hf.space",
+      "*.hf.space"
+    ]
   },
   "android": {
     "allowMixedContent": true,

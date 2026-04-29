@@ -375,7 +375,7 @@ async function handleAction(reply) {
 async function sendMsg() {
   const inp = document.getElementById('txt-inp');
   const text = inp.value.trim();
-  if(!text || isSpeaking) return;
+  if(!text) return;
   inp.value = ''; inp.style.height = 'auto';
   await sendText(text);
 }
@@ -383,7 +383,7 @@ function hKey(e) { if(e.key==='Enter' && !e.shiftKey){e.preventDefault(); sendMs
 function aResize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,80)+'px'; }
 
 async function sendText(text) {
-  if(!text || isSpeaking) return;
+  if(!text) return;
   setStatus('PROCESSING'); setWave(false);
   try {
     const res = await fetch(`${API}/chat`, {

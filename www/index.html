@@ -199,7 +199,7 @@ async function getContactNumber(name) {
 async function openUrl(url) {
   try {
     if (App) { await App.openUrl({ url }); }
-    else { window.open(url, '_blank'); }
+    else { window.location.href = url; }
   } catch(e) { window.open(url, '_blank'); }
 }
 
@@ -397,6 +397,9 @@ async function sendText(text) {
     setStatus('ONLINE');
     const clean = cleanReply(data.reply);
     if(clean) speakText(clean);
+    document.body.addEventListener('click', () => {
+  if(window.speechSynthesis) window.speechSynthesis.resume();
+}, {once: true}); 
   } catch(e) { setStatus('ERROR'); showToast('Connection error!'); }
 }
 
